@@ -5,3 +5,5 @@ def vise():
 t = vise()
 
 print(t)
+
+print("sava")
