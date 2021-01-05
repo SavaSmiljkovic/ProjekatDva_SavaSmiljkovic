@@ -2,6 +2,7 @@ import os
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LOGIN_REDIRECT_URL = '/articles'
 
 SECRET_KEY = 'z+)ko^irgyspmw915h%04f%l+&-pwoych^0)l(xk1bl+e(6$ms'
 
@@ -34,7 +35,7 @@ ROOT_URLCONF = 'drugiProjekat.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'baza/templates')]
+        'DIRS': ['templates', os.path.join(BASE_DIR, 'baza/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
