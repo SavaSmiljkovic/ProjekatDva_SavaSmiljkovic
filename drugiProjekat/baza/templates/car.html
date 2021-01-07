@@ -1,0 +1,32 @@
+{% extends 'master.html' %}
+
+{% block content %}
+
+    <div class="card">
+        <div class="card-header">
+            <h1>
+                {{ car.title }}
+                {% if perms.baza.change_car %}
+                    <a href="{% url 'baza:edit' car.id %}">
+                        <span class="badge badge-primary">Edit</span>
+                    </a>
+                    <a href="{% url 'baza:delete' car.id %}">
+                        <span class="badge badge-primary">Delete</span>
+                    </a>
+                {% endif %}
+            </h1>
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>{{ car.content }}</p>
+<!--                <footer class="blockquote-footer">-->
+<!--                    Author:-->
+<!--                    <cite title="Source Title">-->
+<!--                        {{ car.owner.username }}-->
+<!--                    </cite>-->
+<!--                </footer>-->
+            </blockquote>
+        </div>
+    </div>
+
+{% endblock %}

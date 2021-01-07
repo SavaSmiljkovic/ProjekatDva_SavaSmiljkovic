@@ -1,12 +1,12 @@
 {% extends 'master.html' %}
 
 {% block title %}
-    New article
+    New car
 {% endblock %}
 
 {% block content %}
 
-    <form method="post" action="{% url 'demo_app:new' %}">
+    <form method="post" action="{% url 'baza:new' %}">
         {% csrf_token %}
         <div class="form-group">
             <label for="{{ form.title.id_for_label }}">{{ form.title.label_tag }}</label>

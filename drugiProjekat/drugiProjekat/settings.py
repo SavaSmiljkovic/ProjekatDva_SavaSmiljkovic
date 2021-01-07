@@ -2,7 +2,7 @@ import os
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LOGIN_REDIRECT_URL = '/articles'
+LOGIN_REDIRECT_URL = '/cars'
 
 SECRET_KEY = 'z+)ko^irgyspmw915h%04f%l+&-pwoych^0)l(xk1bl+e(6$ms'
 
