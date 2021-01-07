@@ -1,0 +1,36 @@
+{% extends 'master.html' %}
+
+{% block content %}
+  <h2>User Information</h2>
+  <form method="post">
+    {% csrf_token %}
+    <a>First name: </a>&nbsp;
+    <a>{{ user.get_short_name }}</a><br>
+<!--    <button type="button" onclick=" relocate_l()">Change first name</button><br><br>-->
+    <a>Last name: </a>&nbsp;
+    <a>{{ user.get_last_name }}</a><br>
+<!--    <button type="button" onclick=" relocate_ret()">Change last name</button><br><br>-->
+    <a>Username: </a>&nbsp;
+    <a>{{ user.get_username }}</a><br>
+<!--    <button type="button" onclick=" relocate_ret()">Change username</button><br><br>-->
+    <a>Email: </a>&nbsp;
+    <a>{{ user.email }}</a><br>
+<!--    <button type="button" onclick=" relocate_ret()">Change email</button><br><br>-->
+<!--    <a> Password </a><br>-->
+<!--    <button type="button" onclick=" relocate_ret()">Change password</button><br><br>-->
+    <br>
+    <input type="button" class="btn btn-primary btn-lg" value="Main Menu" onclick=" relocate_ret()"/>
+        <script>
+        function relocate_ret()
+        {
+             location.href = "http://127.0.0.1:8000/cars/";
+        }
+        </script>
+        <script>
+        function relocate_ret()
+        {
+             location.href = "http://127.0.0.1:8000/cars/";
+        }
+        </script>
+  </form>
+{% endblock %}

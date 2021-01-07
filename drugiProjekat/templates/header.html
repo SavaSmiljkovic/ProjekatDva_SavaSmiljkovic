@@ -17,7 +17,9 @@
     </ul>
 
     {% if user.is_authenticated %}
-        <a class="nav-link" href="{% url 'logout' %}">Logout {{ user.get_username }}</a>
+        <a class="nav-link" href="{% url 'admin:login' %}">Admin</a>
+        <a class="nav-link" href="{% url 'baza:about' %}">User Info</a>
+        <a class="nav-link" href="{% url 'logout' %}">Log Out {{ user.get_username }}</a>
     {% endif %}
 
 </nav>

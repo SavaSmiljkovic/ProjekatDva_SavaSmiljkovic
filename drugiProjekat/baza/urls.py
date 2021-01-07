@@ -9,5 +9,6 @@ urlpatterns = [
     path('car/edit/<int:id>/', views.edit, name='edit'),
     path('car/delete/<int:id>/', views.delete, name='delete'),
     path('car/new/', views.new, name='new'),
-    path('accounts/signUp/', views.signUp, name='signUp')
+    path('accounts/signUp/', views.signUp, name='signUp'),
+    path('about/', views.about, name='about')
 ]

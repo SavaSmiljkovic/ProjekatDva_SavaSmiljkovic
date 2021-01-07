@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 from .models import Car
-from .forms import CarForm, SignUpForm
+from .forms import CarForm, SignUpForm, About
 
 
 def index(req):
@@ -94,7 +94,22 @@ def signUp(req):
             # user = authenticate(username=username, password=password)
             # login(req, user)
             # user.save()
-            return redirect('home')
+            return redirect('login')
     else:
         form = SignUpForm()
     return render(req, 'signup.html', {'form': form})
+
+
+def about(req):
+    if req.method == 'POST':
+        #  form = About(req.POST)
+        # if form.is_valid():
+        #     form.save()
+        username = User.get_username()
+        firstName = User.get_short_name()
+        lastName = User.get_last_name()
+        email = User.get_email()
+        return redirect('baza:cars')
+    # else:
+    #      form = About()
+    return render(req, 'about.html')
